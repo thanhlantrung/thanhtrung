@@ -97,6 +97,19 @@ h3{font-family:var(--serif);font-size:1.65rem;font-weight:400;color:var(--forest
   .meta{gap:7px}
   .meta span+span:before{margin-right:7px}
 }
+
+.portrait-panel {
+  overflow: hidden;
+}
+
+.portrait-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: center 35%;
+}
 </style>
 </head>
 
@@ -237,13 +250,11 @@ h3{font-family:var(--serif);font-size:1.65rem;font-weight:400;color:var(--forest
 <section class="section wrap" id="about">
   <div class="photo-strip">
     <div class="portrait-panel">
-      <div class="portrait-placeholder">
-        <strong>Your photograph goes here</strong>
-        <span>
-          Ideally a relaxed, natural portrait in soft daylight.
-          A photograph that feels like you, rather than a corporate headshot.
-        </span>
-      </div>
+      <img
+        class="portrait-image"
+        src="portrait.jpg"
+        alt="Portrait of me in my garden"
+      >
     </div>
 
     <div class="about-copy">
