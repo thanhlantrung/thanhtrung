@@ -53,7 +53,7 @@
       max-width: 850px;
       margin: 22px 0 24px;
       color: var(--forest);
-      font-size: clamp(3.1rem, 7vw, 6.8rem);
+      font-size: clamp(2.8rem, 6vw, 6rem);
       line-height: 0.99;
     }
 
@@ -289,44 +289,46 @@
       background: var(--oat);
     }
 
-    .training-group {
+    .training-list {
       margin-top: 30px;
+      max-width: 850px;
+    }
+
+    .training-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
     }
 
     .training-label {
-      margin: 0 0 12px;
-      color: var(--moss);
+      color: var(--muted);
       font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 600;
     }
 
-    .training-item {
-      margin-bottom: 10px;
-      padding: 22px 25px;
-      border: 1px solid var(--line);
-      background: var(--white);
-    }
-
-    .training-title {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .training-title h3 {
-      margin: 0;
-      font-size: 1.35rem;
-    }
-
-    .training-item p {
-      margin: 7px 0 0;
+    .training-row p {
+      margin: 0 0 7px;
       color: var(--muted);
       font-size: 0.9rem;
+    }
+
+    .training-row p:last-child {
+      margin-bottom: 0;
+    }
+
+    .training-row strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    @media (max-width: 760px) {
+      .training-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
     }
 
     .training-status {
@@ -562,19 +564,14 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">Individual counselling · in English</div>
-          <h1 class="serif">Online counselling in English.</h1>
+          <h1 class="serif">Online counselling in English</h1>
 
           <p class="intro">
-            Having grown up in Australia in a Vietnamese family and made a life for myself in Berlin,
-            I've spent much of my life navigating different cultures, languages and ways of seeing the world.
-            I'm interested in how our backgrounds, relationships and experiences shape who we are,
-            and how we find our place in the world.
+            Having grown up in Australia in a Vietnamese family and now living in Berlin since 2013, I've spent much of my life navigating different cultures, languages and ways of seeing the world. I'm interested in how our backgrounds, relationships and experiences shape who we are, and how we find our place in the world.
           </p>
 
           <p class="intro">
-            Sometimes life brings questions that aren't easy to work through on our own.
-            I offer a space to slow down, talk things through and explore what's going on for you,
-            with curiosity and without judgement.
+            I offer individual counselling in English for people navigating relationships, cross-cultural experiences, identity and life changes. Whether you're adjusting to life in a new place, working through difficulties in a relationship or trying to make sense of a period of change, I offer a space to slow down, talk things through and explore what's going on for you, with curiosity and without judgement.
           </p>
 
           <p class="lead" style="margin-top: 18px;">Based in Berlin, working online.</p>
@@ -709,51 +706,29 @@
           </p>
         </div>
 
-        <div class="training-group">
-          <h3 class="training-label">Counselling qualification</h3>
-          <article class="training-item">
-            <div class="training-title">
-              <h3>Diploma of Counselling</h3>
+        <div class="training-list">
+          <div class="training-row">
+            <span class="training-label">Counselling qualification</span>
+            <div>
+              <p><strong>Diploma of Counselling</strong> — Australian Institute of Professional Counsellors (AIPC)</p>
             </div>
-            <p>Australian Institute of Professional Counsellors (AIPC)</p>
-          </article>
-        </div>
+          </div>
 
-        <div class="training-group">
-          <h3 class="training-label">Further training &amp; professional development</h3>
-
-          <article class="training-item">
-            <div class="training-title">
-              <h3>Emotionally Focused Therapy (EFT) Externship</h3>
+          <div class="training-row">
+            <span class="training-label">Further training</span>
+            <div>
+              <p><strong>Emotionally Focused Therapy (EFT) Externship</strong> — EFT Ireland</p>
+              <p><strong>Gottman Method Couples Therapy – Level 1</strong> — The Gottman Institute (in progess)</p>
+              <p><strong>Acceptance and Commitment Therapy (ACT) for Beginners</strong> — Psychwire (in progress)</p>
             </div>
-            <p>EFT Ireland</p>
-          </article>
+          </div>
 
-          <article class="training-item">
-            <div class="training-title">
-              <h3>Gottman Method Couples Therapy – Level 1</h3>
-              <span class="training-status">In progress</span>
+          <div class="training-row">
+            <span class="training-label">University education</span>
+            <div>
+              <p><strong>Bachelor of Arts (European Studies, Spanish and Latin American Studies)</strong></p><p> — University of Sydney</p>
             </div>
-            <p>The Gottman Institute</p>
-          </article>
-
-          <article class="training-item">
-            <div class="training-title">
-              <h3>Acceptance and Commitment Therapy (ACT) for Beginners</h3>
-              <span class="training-status">In progress</span>
-            </div>
-            <p>Psychwire</p>
-          </article>
-        </div>
-
-        <div class="training-group">
-          <h3 class="training-label">University education</h3>
-          <article class="training-item">
-            <div class="training-title">
-              <h3>Bachelor of Arts (European Studies, Spanish and Latin American Studies)</h3>
-            </div>
-            <p>University of Sydney</p>
-          </article>
+          </div>
         </div>
 
         <p class="small" style="max-width: 780px; margin-top: 28px;">
